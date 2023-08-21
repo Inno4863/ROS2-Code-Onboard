@@ -1,0 +1,58 @@
+[0.064s] Invoking command in '/home/spiderweb/TestBase/build/more_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spiderweb/TestBase/install/my_station_pkg:/opt/ros/humble /usr/bin/cmake --build /home/spiderweb/TestBase/build/more_interfaces -- -j4 -l4
+[0.298s] [  1%] Built target more_interfaces__cpp
+[0.320s] [ 12%] Built target more_interfaces__rosidl_generator_c
+[0.374s] [ 12%] Built target ament_cmake_python_copy_more_interfaces
+[0.460s] [ 24%] Built target more_interfaces__rosidl_typesupport_cpp
+[0.473s] [ 47%] Built target more_interfaces__rosidl_typesupport_introspection_cpp
+[0.478s] [ 46%] Built target more_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.533s] [ 58%] Built target more_interfaces__rosidl_typesupport_fastrtps_c
+[0.583s] [ 70%] Built target more_interfaces__rosidl_typesupport_introspection_c
+[0.594s] [ 82%] Built target more_interfaces__rosidl_typesupport_c
+[0.689s] [ 82%] Built target more_interfaces
+[0.784s] [ 83%] Built target more_interfaces__py
+[0.896s] [ 93%] Built target more_interfaces__rosidl_generator_py
+[1.007s] [ 95%] Built target more_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.013s] [ 97%] Built target more_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.027s] [100%] Built target more_interfaces__rosidl_typesupport_c__pyext
+[1.795s] running egg_info
+[1.798s] writing more_interfaces.egg-info/PKG-INFO
+[1.799s] writing dependency_links to more_interfaces.egg-info/dependency_links.txt
+[1.800s] writing top-level names to more_interfaces.egg-info/top_level.txt
+[1.811s] reading manifest file 'more_interfaces.egg-info/SOURCES.txt'
+[1.814s] writing manifest file 'more_interfaces.egg-info/SOURCES.txt'
+[1.940s] [100%] Built target ament_cmake_python_build_more_interfaces_egg
+[2.017s] Invoked command in '/home/spiderweb/TestBase/build/more_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spiderweb/TestBase/install/my_station_pkg:/opt/ros/humble /usr/bin/cmake --build /home/spiderweb/TestBase/build/more_interfaces -- -j4 -l4
+[2.981s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 67, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1872, in _run_once
+    self._process_events(event_list)
+  File "/usr/lib/python3.10/asyncio/selector_events.py", line 604, in _process_events
+    if reader._cancelled:
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build
+    rc = await extension.build(
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 110, in build
+    if await has_target(args.build_base, 'install'):
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 57, in has_target
+    return target in await get_makefile_targets(path)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 77, in get_makefile_targets
+    output = await check_output([
+  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 128, in check_output
+    assert not rc, f'Expected {args} to pass: {stderr_data}'
+AssertionError: Expected ['/usr/bin/cmake', '--build', '/home/spiderweb/TestBase/build/more_interfaces', '--target', 'help'] to pass: gmake: *** wait: No child processes.  Stop.
+gmake: *** Waiting for unfinished jobs....
+gmake: *** wait: No child processes.  Stop.
+

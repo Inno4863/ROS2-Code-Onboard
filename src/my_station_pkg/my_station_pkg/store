@@ -1,0 +1,229 @@
+import asyncio
+import rclpy
+from rclpy.node import Node
+from more_interfaces.msg import Trials1
+from mavsdk import System
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
+
+class TelemetryPublisherNode(Node):
+    def __init__(self):
+        super().__init__('telemetrypoll_node')
+        self.drone = System()
+
+        self.publisher_ = self.create_publisher(Trials1, 'status_update', 10)
+
+        self.loop = asyncio.get_event_loop()
+        self.loop.run_until_complete(self.connect_to_drone())
+
+        telemetry_callback_group = MutuallyExclusiveCallbackGroup()
+        self.create_timer(0.01, self.telemetry_polling, callback_group=telemetry_callback_group)
+
+        self.mission_complete = False
+        self.flight_latitude = None
+        self.flight_longitude = None
+        self.latitude = 0.0
+        self.longitude = 0.0
+        self.altitudeSealevel = None
+        self.flight_mode = 3
+        self.armed = False
+        self.in_air = False
+        self.gps = 0
+        self.landed_status = 0
+        self.pos_altitude = 0.0
+        self.altitudeSealevel = 0.0
+        self.velocity_x = 0.0
+        self.velocity_y = 0.0
+        self.velocity_z = 0.0
+        self.yaw = 0.0
+        self.battery = 0.0
+
+        
+
+    async def connect_to_drone(self):
+        self.get_logger().info('Waiting for the drone to connect...')
+
+        try:
+            await self._connect_to_drone()
+        except Exception as e:
+            self.get_logger().error(f"Drone connection failed: {str(e)}")
+
+        self.get_logger().info('Drone connected')
+
+    async def _connect_to_drone(self):
+        await self.drone.connect(system_address = "serial:///dev/ttyUSB0:57600")
+
+
+    def publish_msg(self):
+        print('here')
+        msg = Trials1()
+        msg.armed = self.armed
+        msg.is_in_air = self.in_air
+        msg.gps_satellites = self.gps
+        msg.battery_percentage = self.battery
+        msg.flight_mode = self.flight_mode
+        msg.landed_state = self.landed_status
+        msg.pos_altitude = self.pos_altitude 
+        msg.rel_altitude = self.altitudeSealevel
+        msg.pos_longitude = self.longitude
+        msg.pos_latitude = self.latitude
+        msg.velocity_x = self.velocity_x
+        msg.velocity_y = self.velocity_y
+        msg.velocity_z = self.velocity_z
+        #msg.mission_done = self.mission_complete
+        msg.current_yaw = self.yaw
+        self.publisher_.publish(msg)
+        
+
+    async def telemetry_polling(self):
+        
+        self.get_battery_info(),
+        self.get_gps_info(),
+        self.get_in_air_status(),
+        self.get_landed_state(),
+        self.get_armed_state(),
+        self.get_position_state(),
+        self.get_velocity_state(),
+        self.get_yaw_state(),
+        self.get_flightmode_state()
+        
+        self.publish_msg()
+
+    
+    async def get_flightmode_state(self):
+        try:
+            async for flight_info in self.drone.telemetry.flight_mode():
+                self.get_logger().info(f"flight_mode: {flight_info}")
+                self.flight_mode = self.mission_complete_function(flight_info)
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in flight mode telemetry: {e}")
+
+    async def get_yaw_state(self):
+        try:
+            async for yaw_info in self.drone.telemetry.attitude_euler():
+                self.get_logger().info(f"yaw_angle: {yaw_info.yaw_deg}")
+                self.yaw = yaw_info.yaw_deg
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in attitude telemetry: {e}")
+
+
+    async def get_velocity_state(self):
+        try:
+            async for velocity in self.drone.telemetry.velocity_ned():
+                self.velocity_x = velocity.north_m_s
+                self.get_logger().info(f"velocity_x:{self.velocity_x}")
+                self.velocity_y = velocity.east_m_s
+                self.get_logger().info(f"velocity_y: {self.velocity_y}")
+                self.velocity_z = velocity.down_m_s
+                self.get_logger().info(f"velocity_z:{self.velocity_z}")
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in velocity telemetry: {e}")
+    
+    async def get_position_state(self):
+        try:
+            async for position in self.drone.telemetry.position():  # get drone position
+                self.get_logger().info(f"position_lat:{position.latitude_deg}")
+                self.get_logger().info(f"position_lon:{position.longitude_deg}")
+                self.get_logger().info(f"position_alt:{position.relative_altitude_m}")
+                self.get_logger().info(f"position_alt:{position.absolute_altitude_m}")
+                self.longitude = position.longitude_deg
+                self.latitude = position.latitude_deg
+                self.pos_altitude = position.relative_altitude_m
+                self.altitudeSealevel = position.absolute_altitude_m
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in position telemetry: {e}")
+
+
+    async def get_armed_state(self):
+        try:
+            async for armed in self.drone.telemetry.armed():  # get drone arming status
+                self.get_logger().info(f"armed:{armed}")
+                self.armed = armed
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in armed telemetry: {e}")
+
+    async def get_landed_state(self):
+        try:
+            async for land_detected in self.drone.telemetry.landed_state():  # get landing status
+                self.landed_status = self.landing_state_check(land_detected)
+                self.get_logger().info(f"landed_state:{self.landed_status}")
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in landed state telemetry: {e}")
+
+    async def get_battery_info(self):
+        try:
+            print('2')
+            async for battery in self.drone.telemetry.battery():
+                self.get_logger().info(f"battery_state: {battery.remaining_percent}")
+                self.battery = battery.remaining_percent
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in battery telemetry: {e}")
+
+    async def get_gps_info(self):
+        try:
+            async for gps_info in self.drone.telemetry.gps_info():
+                self.get_logger().info(f"GPS info: {gps_info}")
+                self.gps = gps_info.num_satellites
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in GPS telemetry: {e}")
+
+    async def get_in_air_status(self):
+        try:
+            async for in_air in self.drone.telemetry.in_air():
+                self.get_logger().info(f"in_air:{in_air}")
+                self.in_air = in_air
+                break
+        except Exception as e:
+            self.get_logger().error(f"Error in in-air telemetry: {e}")
+
+    def landing_state_check(self, lander_state):
+        landing_states = {
+            lander_state.ON_GROUND: 0,
+            lander_state.IN_AIR: 2,
+            lander_state.TAKING_OFF: 1,
+            lander_state.LANDING: 3,
+            lander_state.UNKNOWN: 4
+        }
+
+        return landing_states.get(lander_state, 4)  # Default to 4 if the key is not found
+
+
+    def mission_complete_function(self, flight_info):
+        flight_modes = {
+            flight_info.HOLD: 3,
+            flight_info.MISSION: 4,
+            flight_info.TAKEOFF: 2,
+            flight_info.LAND: 6,
+            flight_info.RETURN_TO_LAUNCH: 5,
+            flight_info.ACRO: 8
+        }
+
+        self.flight_mode = flight_modes.get(flight_info, 9)  # Default to 9 if the key is not found
+        return self.flight_mode
+
+
+    async def main_loop(self):
+        while rclpy.ok():
+            await self.telemetry_polling()
+            #await asyncio.sleep(0.1)  # Adjust the sleep interval as needed
+
+def main(args=None):
+    rclpy.init(args=args)
+    telemetry_publisher = TelemetryPublisherNode()
+
+    try:
+        asyncio.get_event_loop().run_until_complete(telemetry_publisher.connect_to_drone())
+        asyncio.get_event_loop().run_until_complete(telemetry_publisher.main_loop())
+    finally:
+        telemetry_publisher.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
