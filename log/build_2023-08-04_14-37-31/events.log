@@ -1,0 +1,507 @@
+[0.000000] (-) TimerEvent: {}
+[0.001756] (more_interfaces) JobQueued: {'identifier': 'more_interfaces', 'dependencies': OrderedDict()}
+[0.002500] (my_station_pkg) JobQueued: {'identifier': 'my_station_pkg', 'dependencies': OrderedDict([('more_interfaces', '/home/spiderweb/TestBase/install/more_interfaces')])}
+[0.004072] (my_drone_bringup) JobQueued: {'identifier': 'my_drone_bringup', 'dependencies': OrderedDict([('more_interfaces', '/home/spiderweb/TestBase/install/more_interfaces'), ('my_station_pkg', '/home/spiderweb/TestBase/install/my_station_pkg')])}
+[0.004481] (more_interfaces) JobStarted: {'identifier': 'more_interfaces'}
+[0.078117] (more_interfaces) JobProgress: {'identifier': 'more_interfaces', 'progress': 'cmake'}
+[0.086331] (more_interfaces) JobProgress: {'identifier': 'more_interfaces', 'progress': 'build'}
+[0.089889] (more_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/spiderweb/TestBase/build/more_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/spiderweb/TestBase/build/more_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'spiderweb'), ('SSH_CLIENT', '10.242.132.251 38292 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/spiderweb/TestBase/install/more_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/spiderweb'), ('TERM_PROGRAM_VERSION', '1.80.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-a6bb6c72-bcd1-4c9f-b4ee-c061b9eb31d9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/spiderweb/TestBase/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'spiderweb'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/remote-cli:/home/spiderweb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f6d3972feb.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/my_station_pkg:/home/spiderweb/TestBase/install/more_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/spiderweb/TestBase/build/more_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.242.132.251 38292 10.242.20.239 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/spiderweb/TestBase/install/my_station_pkg/lib/python3.10/site-packages:/home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/more_interfaces:/home/spiderweb/TestBase/install/my_station_pkg:/opt/ros/humble')]), 'shell': False}
+[0.108291] (-) TimerEvent: {}
+[0.210757] (-) TimerEvent: {}
+[0.311803] (-) TimerEvent: {}
+[0.412941] (-) TimerEvent: {}
+[0.513836] (-) TimerEvent: {}
+[0.614823] (-) TimerEvent: {}
+[0.715896] (-) TimerEvent: {}
+[0.760336] (more_interfaces) StdoutLine: {'line': b'[  1%] Built target more_interfaces__cpp\n'}
+[0.802297] (more_interfaces) StdoutLine: {'line': b'[ 12%] Built target more_interfaces__rosidl_generator_c\n'}
+[0.816156] (-) TimerEvent: {}
+[0.861656] (more_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_more_interfaces\n'}
+[0.916422] (-) TimerEvent: {}
+[0.945770] (more_interfaces) StdoutLine: {'line': b'[ 24%] Built target more_interfaces__rosidl_typesupport_cpp\n'}
+[0.967116] (more_interfaces) StdoutLine: {'line': b'[ 35%] Built target more_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.016655] (-) TimerEvent: {}
+[1.031305] (more_interfaces) StdoutLine: {'line': b'[ 47%] Built target more_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[1.075291] (more_interfaces) StdoutLine: {'line': b'[ 58%] Built target more_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.093974] (more_interfaces) StdoutLine: {'line': b'[ 70%] Built target more_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.098983] (more_interfaces) StdoutLine: {'line': b'[ 82%] Built target more_interfaces__rosidl_typesupport_c\n'}
+[1.117009] (-) TimerEvent: {}
+[1.195245] (more_interfaces) StdoutLine: {'line': b'[ 82%] Built target more_interfaces\n'}
+[1.217177] (-) TimerEvent: {}
+[1.318045] (-) TimerEvent: {}
+[1.331572] (more_interfaces) StdoutLine: {'line': b'[ 83%] Built target more_interfaces__py\n'}
+[1.418266] (-) TimerEvent: {}
+[1.480324] (more_interfaces) StdoutLine: {'line': b'[ 93%] Built target more_interfaces__rosidl_generator_py\n'}
+[1.518473] (-) TimerEvent: {}
+[1.594708] (more_interfaces) StdoutLine: {'line': b'[ 95%] Built target more_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[1.599317] (more_interfaces) StdoutLine: {'line': b'[ 97%] Built target more_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.618644] (-) TimerEvent: {}
+[1.702274] (more_interfaces) StdoutLine: {'line': b'[100%] Built target more_interfaces__rosidl_typesupport_c__pyext\n'}
+[1.718831] (-) TimerEvent: {}
+[1.819833] (-) TimerEvent: {}
+[1.920575] (-) TimerEvent: {}
+[2.021314] (-) TimerEvent: {}
+[2.122013] (-) TimerEvent: {}
+[2.222766] (-) TimerEvent: {}
+[2.323529] (-) TimerEvent: {}
+[2.424250] (-) TimerEvent: {}
+[2.435415] (more_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[2.438645] (more_interfaces) StdoutLine: {'line': b'writing more_interfaces.egg-info/PKG-INFO\n'}
+[2.441123] (more_interfaces) StdoutLine: {'line': b'writing dependency_links to more_interfaces.egg-info/dependency_links.txt\n'}
+[2.442075] (more_interfaces) StdoutLine: {'line': b'writing top-level names to more_interfaces.egg-info/top_level.txt\n'}
+[2.459352] (more_interfaces) StdoutLine: {'line': b"reading manifest file 'more_interfaces.egg-info/SOURCES.txt'\n"}
+[2.463921] (more_interfaces) StdoutLine: {'line': b"writing manifest file 'more_interfaces.egg-info/SOURCES.txt'\n"}
+[2.524607] (-) TimerEvent: {}
+[2.590348] (more_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_more_interfaces_egg\n'}
+[2.624759] (-) TimerEvent: {}
+[2.637646] (more_interfaces) CommandEnded: {'returncode': 0}
+[2.724937] (-) TimerEvent: {}
+[2.825770] (-) TimerEvent: {}
+[2.926602] (-) TimerEvent: {}
+[3.027493] (-) TimerEvent: {}
+[3.128667] (-) TimerEvent: {}
+[3.229446] (-) TimerEvent: {}
+[3.330304] (-) TimerEvent: {}
+[3.431796] (-) TimerEvent: {}
+[3.532687] (-) TimerEvent: {}
+[3.633551] (-) TimerEvent: {}
+[3.734366] (-) TimerEvent: {}
+[3.836389] (-) TimerEvent: {}
+[3.937715] (-) TimerEvent: {}
+[4.038499] (-) TimerEvent: {}
+[4.139374] (-) TimerEvent: {}
+[4.171108] (more_interfaces) JobProgress: {'identifier': 'more_interfaces', 'progress': 'install'}
+[4.211252] (more_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/spiderweb/TestBase/build/more_interfaces'], 'cwd': '/home/spiderweb/TestBase/build/more_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'spiderweb'), ('SSH_CLIENT', '10.242.132.251 38292 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/spiderweb/TestBase/install/more_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/spiderweb'), ('TERM_PROGRAM_VERSION', '1.80.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-a6bb6c72-bcd1-4c9f-b4ee-c061b9eb31d9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/spiderweb/TestBase/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'spiderweb'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/remote-cli:/home/spiderweb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f6d3972feb.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/my_station_pkg:/home/spiderweb/TestBase/install/more_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/spiderweb/TestBase/build/more_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.242.132.251 38292 10.242.20.239 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/spiderweb/TestBase/install/my_station_pkg/lib/python3.10/site-packages:/home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/more_interfaces:/home/spiderweb/TestBase/install/my_station_pkg:/opt/ros/humble')]), 'shell': False}
+[4.239578] (-) TimerEvent: {}
+[4.262732] (more_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.264681] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/ament_index/resource_index/rosidl_interfaces/more_interfaces\n'}
+[4.266184] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[4.267819] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv\n'}
+[4.269267] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/timer.h\n'}
+[4.270951] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/arduino1.h\n'}
+[4.271719] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail\n'}
+[4.272360] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__type_support.h\n'}
+[4.272940] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__type_support.h\n'}
+[4.273512] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__functions.c\n'}
+[4.274271] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__functions.c\n'}
+[4.275083] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__functions.c\n'}
+[4.275716] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__struct.h\n'}
+[4.276280] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__functions.h\n'}
+[4.276847] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__struct.h\n'}
+[4.277331] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__functions.h\n'}
+[4.277801] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__type_support.h\n'}
+[4.278178] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__type_support.h\n'}
+[4.278569] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__functions.h\n'}
+[4.279052] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__functions.c\n'}
+[4.279584] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__functions.h\n'}
+[4.280043] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__type_support.h\n'}
+[4.280450] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__struct.h\n'}
+[4.280923] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__struct.h\n'}
+[4.281360] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__functions.h\n'}
+[4.281781] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__struct.h\n'}
+[4.282231] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__functions.h\n'}
+[4.282560] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__struct.h\n'}
+[4.283187] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__type_support.h\n'}
+[4.283771] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__functions.c\n'}
+[4.284175] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__struct.h\n'}
+[4.284655] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__functions.c\n'}
+[4.285178] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__functions.h\n'}
+[4.285527] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__type_support.h\n'}
+[4.285811] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__struct.h\n'}
+[4.286085] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__functions.c\n'}
+[4.286403] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__functions.c\n'}
+[4.286674] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__functions.h\n'}
+[4.286945] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__type_support.h\n'}
+[4.287284] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/mission.h\n'}
+[4.287589] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/alert.h\n'}
+[4.287864] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/comms.h\n'}
+[4.288137] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/error.h\n'}
+[4.288405] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/trigger.h\n'}
+[4.288715] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/string.h\n'}
+[4.288990] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[4.289281] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.289645] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[4.289968] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__functions.h\n'}
+[4.290347] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__functions.c\n'}
+[4.290700] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__type_support.h\n'}
+[4.291155] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__struct.h\n'}
+[4.291577] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/trials1.h\n'}
+[4.292107] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/environment/library_path.sh\n'}
+[4.292591] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/environment/library_path.dsv\n'}
+[4.292976] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_c.so\n'}
+[4.293492] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[4.293942] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv\n'}
+[4.294389] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail\n'}
+[4.294852] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__rosidl_typesupport_fastrtps_c.h\n'}
+[4.295343] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__rosidl_typesupport_fastrtps_c.h\n'}
+[4.295876] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__rosidl_typesupport_fastrtps_c.h\n'}
+[4.296403] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__rosidl_typesupport_fastrtps_c.h\n'}
+[4.296806] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__rosidl_typesupport_fastrtps_c.h\n'}
+[4.297270] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__rosidl_typesupport_fastrtps_c.h\n'}
+[4.297700] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__rosidl_typesupport_fastrtps_c.h\n'}
+[4.298085] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__rosidl_typesupport_fastrtps_c.h\n'}
+[4.298486] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[4.298939] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.299451] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[4.299755] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__rosidl_typesupport_fastrtps_c.h\n'}
+[4.302337] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[4.303664] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[4.304323] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv\n'}
+[4.304689] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail\n'}
+[4.305210] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__type_support.c\n'}
+[4.305570] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__rosidl_typesupport_introspection_c.h\n'}
+[4.306031] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__rosidl_typesupport_introspection_c.h\n'}
+[4.306603] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__rosidl_typesupport_introspection_c.h\n'}
+[4.307239] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__type_support.c\n'}
+[4.307911] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__type_support.c\n'}
+[4.308375] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__type_support.c\n'}
+[4.309100] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__rosidl_typesupport_introspection_c.h\n'}
+[4.309745] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__rosidl_typesupport_introspection_c.h\n'}
+[4.310383] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__type_support.c\n'}
+[4.310975] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__rosidl_typesupport_introspection_c.h\n'}
+[4.311600] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__rosidl_typesupport_introspection_c.h\n'}
+[4.312002] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__type_support.c\n'}
+[4.312320] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__type_support.c\n'}
+[4.312589] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__rosidl_typesupport_introspection_c.h\n'}
+[4.312860] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__type_support.c\n'}
+[4.313125] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[4.313389] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[4.313653] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__type_support.c\n'}
+[4.313913] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__rosidl_typesupport_introspection_c.h\n'}
+[4.314176] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.316992] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[4.320851] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_c.so\n'}
+[4.321936] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[4.322450] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv\n'}
+[4.323207] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/arduino1.hpp\n'}
+[4.323823] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/alert.hpp\n'}
+[4.324634] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail\n'}
+[4.325425] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__struct.hpp\n'}
+[4.326107] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__struct.hpp\n'}
+[4.326671] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__struct.hpp\n'}
+[4.327337] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__traits.hpp\n'}
+[4.328140] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__struct.hpp\n'}
+[4.328867] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__builder.hpp\n'}
+[4.329561] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__traits.hpp\n'}
+[4.330244] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__struct.hpp\n'}
+[4.331037] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__builder.hpp\n'}
+[4.331913] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__builder.hpp\n'}
+[4.332455] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__builder.hpp\n'}
+[4.333246] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__struct.hpp\n'}
+[4.333986] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__traits.hpp\n'}
+[4.334582] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__traits.hpp\n'}
+[4.335133] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__builder.hpp\n'}
+[4.335870] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__traits.hpp\n'}
+[4.336346] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__struct.hpp\n'}
+[4.336822] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__traits.hpp\n'}
+[4.337521] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__builder.hpp\n'}
+[4.338081] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__builder.hpp\n'}
+[4.338781] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__struct.hpp\n'}
+[4.339463] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__traits.hpp\n'}
+[4.340034] (-) TimerEvent: {}
+[4.340409] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__traits.hpp\n'}
+[4.340906] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__builder.hpp\n'}
+[4.341501] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/mission.hpp\n'}
+[4.341891] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/comms.hpp\n'}
+[4.342175] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/trigger.hpp\n'}
+[4.342492] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/string.hpp\n'}
+[4.342849] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/timer.hpp\n'}
+[4.343415] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/error.hpp\n'}
+[4.343945] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[4.344460] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[4.344851] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__struct.hpp\n'}
+[4.345179] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__traits.hpp\n'}
+[4.345730] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__builder.hpp\n'}
+[4.346312] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/trials1.hpp\n'}
+[4.346630] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[4.347176] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv\n'}
+[4.348041] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail\n'}
+[4.348448] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.349211] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.349808] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.350510] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.351118] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/dds_fastrtps\n'}
+[4.351845] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.352392] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.353101] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.353762] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.354378] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[4.354974] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.355432] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[4.355735] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/dds_fastrtps\n'}
+[4.356014] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.356288] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.356557] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces\n'}
+[4.356824] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv\n'}
+[4.357126] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail\n'}
+[4.357399] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.357666] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__type_support.cpp\n'}
+[4.357943] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/arduino1__type_support.cpp\n'}
+[4.358264] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.358598] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.358898] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.359334] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/mission__type_support.cpp\n'}
+[4.359645] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.359956] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/error__type_support.cpp\n'}
+[4.360273] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.360888] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/timer__type_support.cpp\n'}
+[4.361269] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/string__type_support.cpp\n'}
+[4.361563] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/comms__type_support.cpp\n'}
+[4.361888] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.362245] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/trigger__type_support.cpp\n'}
+[4.362595] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/alert__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.362911] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg\n'}
+[4.363311] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail\n'}
+[4.363650] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__type_support.cpp\n'}
+[4.363984] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/include/more_interfaces/more_interfaces/msg/detail/trials1__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.364274] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[4.365102] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_cpp.so\n'}
+[4.366583] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/environment/pythonpath.sh\n'}
+[4.367685] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/environment/pythonpath.dsv\n'}
+[4.368516] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info\n'}
+[4.369067] (more_interfaces) StdoutLine: {'line': b'-- Installing: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[4.370103] (more_interfaces) StdoutLine: {'line': b'-- Installing: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[4.371057] (more_interfaces) StdoutLine: {'line': b'-- Installing: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[4.372531] (more_interfaces) StdoutLine: {'line': b'-- Installing: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[4.373969] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces\n'}
+[4.374733] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.375213] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv\n'}
+[4.375652] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_string_s.c\n'}
+[4.376129] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_timer_s.c\n'}
+[4.376571] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_string.py\n'}
+[4.376966] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_alert.py\n'}
+[4.377417] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_comms_s.c\n'}
+[4.377832] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_arduino1_s.c\n'}
+[4.378210] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_trigger_s.c\n'}
+[4.378661] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_error.py\n'}
+[4.379124] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_mission_s.c\n'}
+[4.380746] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_arduino1.py\n'}
+[4.381590] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_mission.py\n'}
+[4.382307] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_error_s.c\n'}
+[4.382975] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_alert_s.c\n'}
+[4.383872] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_comms.py\n'}
+[4.384439] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/__init__.py\n'}
+[4.385008] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_trigger.py\n'}
+[4.385539] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv/_timer.py\n'}
+[4.385898] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[4.386264] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg\n'}
+[4.386821] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg/_trials1.py\n'}
+[4.387653] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg/__init__.py\n'}
+[4.388186] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg/_trials1_s.c\n'}
+[4.388783] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.389342] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.389928] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.390545] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/__init__.py\n'}
+[4.391612] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/libmore_interfaces__rosidl_generator_py.so\n'}
+[4.392348] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.440229] (-) TimerEvent: {}
+[4.540959] (-) TimerEvent: {}
+[4.549693] (more_interfaces) StdoutLine: {'line': b"Listing '/home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces'...\n"}
+[4.551462] (more_interfaces) StdoutLine: {'line': b"Listing '/home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/msg'...\n"}
+[4.552943] (more_interfaces) StdoutLine: {'line': b"Listing '/home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/srv'...\n"}
+[4.579621] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.584142] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.589543] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.595233] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_py.so\n'}
+[4.597217] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/msg/Trials1.idl\n'}
+[4.597871] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Alert.idl\n'}
+[4.598445] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Arduino1.idl\n'}
+[4.599203] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Comms.idl\n'}
+[4.599836] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Error.idl\n'}
+[4.600452] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Mission.idl\n'}
+[4.600989] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/String.idl\n'}
+[4.601550] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Trigger.idl\n'}
+[4.602063] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Timer.idl\n'}
+[4.602786] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/msg/Trials1.msg\n'}
+[4.603497] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Alert.srv\n'}
+[4.604058] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Alert_Request.msg\n'}
+[4.604695] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Alert_Response.msg\n'}
+[4.605251] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Arduino1.srv\n'}
+[4.605930] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Arduino1_Request.msg\n'}
+[4.606467] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Arduino1_Response.msg\n'}
+[4.607052] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Comms.srv\n'}
+[4.607701] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Comms_Request.msg\n'}
+[4.608296] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Comms_Response.msg\n'}
+[4.608838] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Error.srv\n'}
+[4.609316] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Error_Request.msg\n'}
+[4.609778] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Error_Response.msg\n'}
+[4.610232] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Mission.srv\n'}
+[4.610762] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Mission_Request.msg\n'}
+[4.611296] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Mission_Response.msg\n'}
+[4.611792] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/String.srv\n'}
+[4.612303] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/String_Request.msg\n'}
+[4.612768] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/String_Response.msg\n'}
+[4.613207] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Trigger.srv\n'}
+[4.613691] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Trigger_Request.msg\n'}
+[4.614216] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Trigger_Response.msg\n'}
+[4.614660] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Timer.srv\n'}
+[4.615192] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Timer_Request.msg\n'}
+[4.615775] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/srv/Timer_Response.msg\n'}
+[4.616266] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/ament_index/resource_index/package_run_dependencies/more_interfaces\n'}
+[4.616630] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/ament_index/resource_index/parent_prefix_path/more_interfaces\n'}
+[4.616987] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/environment/ament_prefix_path.sh\n'}
+[4.617279] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/environment/ament_prefix_path.dsv\n'}
+[4.617551] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/environment/path.sh\n'}
+[4.617819] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/environment/path.dsv\n'}
+[4.618082] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/local_setup.bash\n'}
+[4.618356] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/local_setup.sh\n'}
+[4.618623] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/local_setup.zsh\n'}
+[4.618890] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/local_setup.dsv\n'}
+[4.619248] (more_interfaces) StdoutLine: {'line': b'-- Installing: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/package.dsv\n'}
+[4.620463] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/ament_index/resource_index/packages/more_interfaces\n'}
+[4.622782] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cExport.cmake\n'}
+[4.623470] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.626045] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.626638] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.629164] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.629777] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.632316] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[4.632931] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.635159] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cppExport.cmake\n'}
+[4.637739] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.638304] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.640825] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.641403] (-) TimerEvent: {}
+[4.641839] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.644401] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[4.645365] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.648248] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_pyExport.cmake\n'}
+[4.649583] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.650197] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[4.650948] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.651680] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.652200] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.652620] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.653179] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.653744] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.654265] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfacesConfig.cmake\n'}
+[4.654640] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/cmake/more_interfacesConfig-version.cmake\n'}
+[4.655044] (more_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/more_interfaces/share/more_interfaces/package.xml\n'}
+[4.662375] (more_interfaces) CommandEnded: {'returncode': 0}
+[4.743463] (-) TimerEvent: {}
+[4.844814] (-) TimerEvent: {}
+[4.945711] (-) TimerEvent: {}
+[5.046512] (-) TimerEvent: {}
+[5.147266] (-) TimerEvent: {}
+[5.248243] (-) TimerEvent: {}
+[5.349394] (-) TimerEvent: {}
+[5.450264] (-) TimerEvent: {}
+[5.551049] (-) TimerEvent: {}
+[5.651877] (-) TimerEvent: {}
+[5.752709] (-) TimerEvent: {}
+[5.853708] (-) TimerEvent: {}
+[5.954596] (-) TimerEvent: {}
+[6.055497] (-) TimerEvent: {}
+[6.156335] (-) TimerEvent: {}
+[6.257270] (-) TimerEvent: {}
+[6.358182] (-) TimerEvent: {}
+[6.372827] (more_interfaces) JobEnded: {'identifier': 'more_interfaces', 'rc': 0}
+[6.381444] (my_station_pkg) JobStarted: {'identifier': 'my_station_pkg'}
+[6.458583] (-) TimerEvent: {}
+[6.559716] (-) TimerEvent: {}
+[6.660389] (-) TimerEvent: {}
+[6.761141] (-) TimerEvent: {}
+[6.861840] (-) TimerEvent: {}
+[6.962524] (-) TimerEvent: {}
+[7.063227] (-) TimerEvent: {}
+[7.163890] (-) TimerEvent: {}
+[7.264673] (-) TimerEvent: {}
+[7.365396] (-) TimerEvent: {}
+[7.466141] (-) TimerEvent: {}
+[7.566971] (-) TimerEvent: {}
+[7.668467] (-) TimerEvent: {}
+[7.771723] (-) TimerEvent: {}
+[7.872382] (-) TimerEvent: {}
+[7.973114] (-) TimerEvent: {}
+[8.073856] (-) TimerEvent: {}
+[8.174730] (-) TimerEvent: {}
+[8.275429] (-) TimerEvent: {}
+[8.376088] (-) TimerEvent: {}
+[8.476816] (-) TimerEvent: {}
+[8.577480] (-) TimerEvent: {}
+[8.678152] (-) TimerEvent: {}
+[8.778904] (-) TimerEvent: {}
+[8.879654] (-) TimerEvent: {}
+[8.980330] (-) TimerEvent: {}
+[9.081081] (-) TimerEvent: {}
+[9.181884] (-) TimerEvent: {}
+[9.282909] (-) TimerEvent: {}
+[9.383981] (-) TimerEvent: {}
+[9.484787] (-) TimerEvent: {}
+[9.585514] (-) TimerEvent: {}
+[9.686317] (-) TimerEvent: {}
+[9.787261] (-) TimerEvent: {}
+[9.881676] (my_station_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/my_station_pkg', 'build', '--build-base', '/home/spiderweb/TestBase/build/my_station_pkg/build', 'install', '--record', '/home/spiderweb/TestBase/build/my_station_pkg/install.log', '--single-version-externally-managed'], 'cwd': '/home/spiderweb/TestBase/src/my_station_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'spiderweb', 'SSH_CLIENT': '10.242.132.251 38292 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/spiderweb/TestBase/install/more_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/spiderweb', 'TERM_PROGRAM_VERSION': '1.80.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-a6bb6c72-bcd1-4c9f-b4ee-c061b9eb31d9.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/spiderweb/TestBase/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'spiderweb', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/remote-cli:/home/spiderweb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-f6d3972feb.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/my_station_pkg:/home/spiderweb/TestBase/install/more_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/spiderweb/TestBase/build/my_station_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.242.132.251 38292 10.242.20.239 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/spiderweb/TestBase/build/my_station_pkg/prefix_override:/home/spiderweb/TestBase/install/my_station_pkg/lib/python3.10/site-packages:/home/spiderweb/TestBase/install/my_station_pkg/lib/python3.10/site-packages:/home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/spiderweb/TestBase/install/more_interfaces:/home/spiderweb/TestBase/install/my_drone_bringup'}, 'shell': False}
+[9.889028] (-) TimerEvent: {}
+[9.991104] (-) TimerEvent: {}
+[10.091863] (-) TimerEvent: {}
+[10.192571] (-) TimerEvent: {}
+[10.293340] (-) TimerEvent: {}
+[10.394002] (-) TimerEvent: {}
+[10.494699] (-) TimerEvent: {}
+[10.595404] (-) TimerEvent: {}
+[10.696040] (-) TimerEvent: {}
+[10.796687] (-) TimerEvent: {}
+[10.897467] (-) TimerEvent: {}
+[10.998172] (-) TimerEvent: {}
+[11.071140] (my_station_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[11.073653] (my_station_pkg) StdoutLine: {'line': b'writing ../../build/my_station_pkg/my_station_pkg.egg-info/PKG-INFO\n'}
+[11.074701] (my_station_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/my_station_pkg/my_station_pkg.egg-info/dependency_links.txt\n'}
+[11.075694] (my_station_pkg) StdoutLine: {'line': b'writing entry points to ../../build/my_station_pkg/my_station_pkg.egg-info/entry_points.txt\n'}
+[11.076398] (my_station_pkg) StdoutLine: {'line': b'writing requirements to ../../build/my_station_pkg/my_station_pkg.egg-info/requires.txt\n'}
+[11.076980] (my_station_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/my_station_pkg/my_station_pkg.egg-info/top_level.txt\n'}
+[11.086130] (my_station_pkg) StdoutLine: {'line': b"reading manifest file '../../build/my_station_pkg/my_station_pkg.egg-info/SOURCES.txt'\n"}
+[11.094596] (my_station_pkg) StdoutLine: {'line': b"writing manifest file '../../build/my_station_pkg/my_station_pkg.egg-info/SOURCES.txt'\n"}
+[11.095479] (my_station_pkg) StdoutLine: {'line': b'running build\n'}
+[11.096022] (my_station_pkg) StdoutLine: {'line': b'running build_py\n'}
+[11.098036] (my_station_pkg) StdoutLine: {'line': b'running install\n'}
+[11.098656] (-) TimerEvent: {}
+[11.099500] (my_station_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[11.106565] (my_station_pkg) StdoutLine: {'line': b'running install_data\n'}
+[11.108912] (my_station_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[11.115608] (my_station_pkg) StdoutLine: {'line': b"removing '/home/spiderweb/TestBase/install/my_station_pkg/lib/python3.10/site-packages/my_station_pkg-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[11.117321] (my_station_pkg) StdoutLine: {'line': b'Copying ../../build/my_station_pkg/my_station_pkg.egg-info to /home/spiderweb/TestBase/install/my_station_pkg/lib/python3.10/site-packages/my_station_pkg-0.0.0-py3.10.egg-info\n'}
+[11.126273] (my_station_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[11.198915] (-) TimerEvent: {}
+[11.201975] (my_station_pkg) StdoutLine: {'line': b'Installing drone_comms_node script to /home/spiderweb/TestBase/install/my_station_pkg/lib/my_station_pkg\n'}
+[11.203257] (my_station_pkg) StdoutLine: {'line': b'Installing serialrecv script to /home/spiderweb/TestBase/install/my_station_pkg/lib/my_station_pkg\n'}
+[11.204321] (my_station_pkg) StdoutLine: {'line': b'Installing telemetrypoll_node script to /home/spiderweb/TestBase/install/my_station_pkg/lib/my_station_pkg\n'}
+[11.206586] (my_station_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/spiderweb/TestBase/build/my_station_pkg/install.log'\n"}
+[11.299254] (-) TimerEvent: {}
+[11.352934] (my_station_pkg) CommandEnded: {'returncode': 0}
+[11.397863] (my_station_pkg) JobEnded: {'identifier': 'my_station_pkg', 'rc': 0}
+[11.407984] (-) TimerEvent: {}
+[11.408464] (my_drone_bringup) JobStarted: {'identifier': 'my_drone_bringup'}
+[11.455773] (my_drone_bringup) JobProgress: {'identifier': 'my_drone_bringup', 'progress': 'cmake'}
+[11.463676] (my_drone_bringup) JobProgress: {'identifier': 'my_drone_bringup', 'progress': 'build'}
+[11.464846] (my_drone_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/spiderweb/TestBase/build/my_drone_bringup', '--', '-j4', '-l4'], 'cwd': '/home/spiderweb/TestBase/build/my_drone_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'spiderweb'), ('SSH_CLIENT', '10.242.132.251 38292 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/spiderweb/TestBase/install/more_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/spiderweb'), ('TERM_PROGRAM_VERSION', '1.80.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-a6bb6c72-bcd1-4c9f-b4ee-c061b9eb31d9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/spiderweb/TestBase/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'spiderweb'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/remote-cli:/home/spiderweb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f6d3972feb.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/spiderweb/TestBase/install/my_station_pkg:/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/more_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/spiderweb/TestBase/build/my_drone_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.242.132.251 38292 10.242.20.239 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/spiderweb/TestBase/install/my_station_pkg/lib/python3.10/site-packages:/home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/spiderweb/TestBase/install/more_interfaces:/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/my_station_pkg:/opt/ros/humble')]), 'shell': False}
+[11.508182] (-) TimerEvent: {}
+[11.608882] (-) TimerEvent: {}
+[11.640953] (my_drone_bringup) CommandEnded: {'returncode': 0}
+[11.709122] (-) TimerEvent: {}
+[11.760928] (my_drone_bringup) JobProgress: {'identifier': 'my_drone_bringup', 'progress': 'install'}
+[11.762019] (my_drone_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/spiderweb/TestBase/build/my_drone_bringup'], 'cwd': '/home/spiderweb/TestBase/build/my_drone_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'spiderweb'), ('SSH_CLIENT', '10.242.132.251 38292 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/spiderweb/TestBase/install/more_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/spiderweb'), ('TERM_PROGRAM_VERSION', '1.80.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-a6bb6c72-bcd1-4c9f-b4ee-c061b9eb31d9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/spiderweb/TestBase/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'spiderweb'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/spiderweb/.vscode-server/bin/2ccd690cbff1569e4a83d7c43d45101f817401dc/bin/remote-cli:/home/spiderweb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f6d3972feb.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/spiderweb/TestBase/install/my_station_pkg:/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/more_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/spiderweb/TestBase/build/my_drone_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.242.132.251 38292 10.242.20.239 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/spiderweb/TestBase/install/my_station_pkg/lib/python3.10/site-packages:/home/spiderweb/TestBase/install/more_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/spiderweb/TestBase/install/more_interfaces:/home/spiderweb/TestBase/install/my_drone_bringup:/home/spiderweb/TestBase/install/my_station_pkg:/opt/ros/humble')]), 'shell': False}
+[11.802715] (my_drone_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.803604] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/launch\n'}
+[11.804264] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/launch/drone_app.launch.py\n'}
+[11.804872] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/ament_index/resource_index/package_run_dependencies/my_drone_bringup\n'}
+[11.805499] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/ament_index/resource_index/parent_prefix_path/my_drone_bringup\n'}
+[11.806007] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/environment/ament_prefix_path.sh\n'}
+[11.806504] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/environment/ament_prefix_path.dsv\n'}
+[11.807080] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/environment/path.sh\n'}
+[11.807718] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/environment/path.dsv\n'}
+[11.808241] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/local_setup.bash\n'}
+[11.808735] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/local_setup.sh\n'}
+[11.809143] (-) TimerEvent: {}
+[11.809592] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/local_setup.zsh\n'}
+[11.810173] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/local_setup.dsv\n'}
+[11.810825] (my_drone_bringup) StdoutLine: {'line': b'-- Installing: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/package.dsv\n'}
+[11.813374] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/ament_index/resource_index/packages/my_drone_bringup\n'}
+[11.814192] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/cmake/my_drone_bringupConfig.cmake\n'}
+[11.815092] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/cmake/my_drone_bringupConfig-version.cmake\n'}
+[11.815866] (my_drone_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/spiderweb/TestBase/install/my_drone_bringup/share/my_drone_bringup/package.xml\n'}
+[11.819905] (my_drone_bringup) CommandEnded: {'returncode': 0}
+[11.909340] (-) TimerEvent: {}
+[12.011098] (-) TimerEvent: {}
+[12.017023] (my_drone_bringup) JobEnded: {'identifier': 'my_drone_bringup', 'rc': 0}
+[12.021542] (-) EventReactorShutdown: {}

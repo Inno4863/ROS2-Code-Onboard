@@ -1,0 +1,6 @@
+bool trigger
+string message
+string pos_longitude
+string pos_latitude
+string pos_altitude
+float64 turn_yaw
